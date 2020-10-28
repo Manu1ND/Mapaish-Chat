@@ -1,10 +1,8 @@
 <?php
-include("db.php");
+include("../db.php");
 
-$mem_Name = $_POST['mem_Name'];
 $username = $_POST['username'];
 $mem_Password = $_POST['mem_Password'];
-$email = $_POST['email'];
 
 try {
 	// set the PDO error mode to exception
@@ -18,4 +16,6 @@ try {
 	$registerSTMT->bindParam(':email', $email);
 	$registerSTMT->execute();
 	echo "success";
-} catch (PDOException $error) {}
+} catch (PDOException $error) {
+	echo "error";
+}
