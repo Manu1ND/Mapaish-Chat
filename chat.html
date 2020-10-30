@@ -14,7 +14,6 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
 	<link rel="stylesheet" href="assets/chat.css">
 
-
 </head>
 
 <body translate="no">
@@ -25,9 +24,29 @@
 					<img class="profile-image"
 						src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/filip.jpg" alt="Profile img">
 					<span class="settings-tray--right">
-						<i class="material-icons">cached</i>
-						<i class="material-icons">message</i>
-						<i class="material-icons">menu</i>
+						<!-- <i class="material-icons">cached</i> -->
+						<div class="dropdown">
+							<i class="material-icons" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								message
+							</i>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<i class="material-icons" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								menu
+							</i>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
 					</span>
 				</div>
 				<div class="search-box">
@@ -38,7 +57,8 @@
 				</div>
 				<div class="friend-drawer friend-drawer--onhover">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Manjunath</h6>
 						<p class="text-muted">Hey, you're arrested!</p>
@@ -48,7 +68,8 @@
 				<hr>
 				<div class="friend-drawer friend-drawer--onhover">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Ishwar</h6>
 						<p class="text-muted">Wanna grab a beer?</p>
@@ -58,7 +79,8 @@
 				<hr>
 				<div class="friend-drawer friend-drawer--onhover ">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Parth</h6>
 						<p class="text-muted">Seen that canned piece of s?</p>
@@ -68,7 +90,8 @@
 				<hr>
 				<div class="friend-drawer friend-drawer--onhover">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Sahil</h6>
 						<p class="text-muted">Im studying spanish...</p>
@@ -78,7 +101,8 @@
 				<hr>
 				<div class="friend-drawer friend-drawer--onhover">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Ruudra</h6>
 						<p class="text-muted">I'm not sure...</p>
@@ -88,7 +112,8 @@
 				<hr>
 				<div class="friend-drawer friend-drawer--onhover">
 					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+						alt="">
 					<div class="text">
 						<h6>Prem</h6>
 						<p class="text-muted">Hi, wanna see something?</p>
@@ -100,15 +125,14 @@
 				<div class="settings-tray">
 					<div class="friend-drawer no-gutters friend-drawer--grey">
 						<img class="profile-image"
-							src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+							src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+							alt="">
 						<div class="text">
 							<h6>Manjunath</h6>
 							<p class="text-muted">Layin' down the law since like before Christ...</p>
 						</div>
 						<span class="settings-tray--right">
-							<!--i class="material-icons"-->cached</i>
-							<!--i class="material-icons"-->message</i>
-							<i class="material-icons">menu</i>
+							<i class="material-icons"> menu</i>
 						</span>
 					</div>
 				</div>
@@ -177,6 +201,9 @@
 		</div>
 	</div>
 	<script src="assets/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 	<script src="assets/chat.js"></script>
