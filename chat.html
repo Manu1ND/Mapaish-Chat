@@ -55,81 +55,18 @@
 						<input placeholder="Search here" type="text">
 					</div>
 				</div>
-				<div class="friend-drawer friend-drawer--onhover">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Manjunath</h6>
-						<p class="text-muted">Hey, you're arrested!</p>
-					</div>
-					<span class="time text-muted small">13:21</span>
-				</div>
-				<hr>
-				<div class="friend-drawer friend-drawer--onhover">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Ishwar</h6>
-						<p class="text-muted">Wanna grab a beer?</p>
-					</div>
-					<span class="time text-muted small">00:32</span>
-				</div>
-				<hr>
-				<div class="friend-drawer friend-drawer--onhover ">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Parth</h6>
-						<p class="text-muted">Seen that canned piece of s?</p>
-					</div>
-					<span class="time text-muted small">13:21</span>
-				</div>
-				<hr>
-				<div class="friend-drawer friend-drawer--onhover">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Sahil</h6>
-						<p class="text-muted">Im studying spanish...</p>
-					</div>
-					<span class="time text-muted small">13:21</span>
-				</div>
-				<hr>
-				<div class="friend-drawer friend-drawer--onhover">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Ruudra</h6>
-						<p class="text-muted">I'm not sure...</p>
-					</div>
-					<span class="time text-muted small">13:21</span>
-				</div>
-				<hr>
-				<div class="friend-drawer friend-drawer--onhover">
-					<img class="profile-image"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt="">
-					<div class="text">
-						<h6>Prem</h6>
-						<p class="text-muted">Hi, wanna see something?</p>
-					</div>
-					<span class="time text-muted small">13:21</span>
+				<div id="chatRooms">
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="settings-tray">
 					<div class="friend-drawer no-gutters friend-drawer--grey">
-						<img class="profile-image"
+						<img class="profile-image" id="chatPicture"
 							src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
 							alt="">
 						<div class="text">
-							<h6>Manjunath</h6>
-							<p class="text-muted">Layin' down the law since like before Christ...</p>
+							<h6 id="chatName"></h6>
+							<p class="text-muted" id="status"></p>
 						</div>
 						<span class="settings-tray--right">
 							<i class="dropdown">
@@ -146,69 +83,22 @@
 						</span>
 					</div>
 				</div>
-				<div class="chat-panel">
-					<div class="row no-gutters">
-						<div class="col-md-3">
-							<div class="chat-bubble chat-bubble--left">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3 offset-md-9">
-							<div class="chat-bubble chat-bubble--right">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3 offset-md-9">
-							<div class="chat-bubble chat-bubble--right">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3">
-							<div class="chat-bubble chat-bubble--left">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3">
-							<div class="chat-bubble chat-bubble--left">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3">
-							<div class="chat-bubble chat-bubble--left">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col-md-3 offset-md-9">
-							<div class="chat-bubble chat-bubble--right">
-								Hello dude!
-							</div>
-						</div>
-					</div>
-					<div class="row">
+				<div class="chat-section">
+					<div id="chat-panel" class="chat-panel"></div>
+					<div class="row search-bar" hidden>
 						<div class="col-12">
 							<div class="chat-box-tray">
 								<i class="material-icons">sentiment_very_satisfied</i>
-								<input type="text" placeholder="Type your message here...">
+								<input type="text" id="inputMessage" placeholder="Type your message here...">
 								<!--Changes made-->
-								<i class="material-icons">send</i>
+								<i class="material-icons" id="sendMessage">send</i>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<input type="hidden" id="roomID" value="" />
 	</div>
 	<script src="assets/jquery-3.5.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
