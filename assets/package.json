@@ -1,0 +1,24 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mapaish/sem5mp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mapaish/sem5mp/issues"
+  },
+  "homepage": "https://github.com/Mapaish/sem5mp#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-select": "^1.13.18",
+    "jquery": "^3.5.1"
+  }
+}
