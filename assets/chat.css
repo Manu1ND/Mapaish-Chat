@@ -8,11 +8,18 @@ body
 
 .container 
 {
-	margin: 60px auto;
+	margin: 120px auto;
 	background: #fff;
 	padding: 0;
 	border-radius: 7px;
 	height: 550px;
+}
+
+.chat-section
+{
+	background-image: url(https://images.pexels.com/photos/2457278/pexels-photo-2457278.jpeg);
+	background-repeat: no-repeat;
+	background-size:cover;
 }
 
 .chat-panel 
