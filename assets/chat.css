@@ -199,6 +199,25 @@ hr
 	margin-right: -20px;
 }
 
+.chat-bubble--title
+{
+	font-size: small;
+	font-family: cursive;
+	font-weight: normal;
+	text-align: left;
+	color: rgb(231, 104, 19);
+}
+
+.chat-bubble--time
+{
+	font-size: small;
+	font-family: cursive;
+	font-weight: normal;
+	text-align: right;
+    font-style: italic;
+	color: rgb(231, 104, 19);
+}
+
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -213,6 +232,7 @@ hr
 {
 	background: #014283;
 	color:white;
+	font-weight: bolder;
 }
 
 .chat-box-tray 
