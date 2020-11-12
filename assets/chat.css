@@ -17,9 +17,19 @@ body
 
 .chat-section
 {
-	background-image: url(https://images.pexels.com/photos/2457278/pexels-photo-2457278.jpeg);
 	background-repeat: no-repeat;
 	background-size:cover;
+}
+
+.col-md-8
+{
+	background-image: url(https://images.pexels.com/photos/2457278/pexels-photo-2457278.jpeg);
+	background-repeat: no-repeat;
+	background-position: center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+	background-size: cover;
 }
 
 .chat-panel 
@@ -27,6 +37,13 @@ body
 	overflow-x: hidden;
     overflow-y: scroll;
     height: 396.24px;
+}
+
+.chatRooms 
+{
+	overflow-x: hidden;
+    overflow-y: scroll;
+    height: 433.24px;
 }
 
 .profile-image 
