@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <title>Mapaish</title>
+    <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/node_modules/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="assets/login_reg.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="title mb-4">
+                                    <center>WELCOME TO MAPAISH</center>
+                                </h3><br>
+                                <div class="row">
+                                    <ul>
+                                        <li class="tab active"><a href="#signup"><button
+                                                    class="btn btn-lg btn-primary btn-block btn-login font-weight-bold mb-2">SIGN
+                                                    UP</button></a></li>
+                                        <li class="tab"><a href="#login"><button
+                                                    class="btn btn-lg btn-primary btn-block btn-login font-weight-bold mb-2">LOGIN</button></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--Register Form-->
+                                <form id="register">
+
+                                    <h3 class="register-heading mb-4">
+                                        <center>REGISTER</center>
+                                    </h3>
+
+                                    <div class="form-label-group">
+                                        <input type="text" placeholder="Full Name" id="mem_name" name="mem_name"
+                                            class="form-control" />
+                                        <label for="mem_name">Full Name</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="text" placeholder="Username" id="username" name="username"
+                                            class="form-control" />
+                                        <label for="username">Username</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="email" placeholder="Email address" id="email" name="email"
+                                            class="form-control">
+                                        <label for="email">Email address</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="password" placeholder="Password" id="password" name="password"
+                                            class="form-control">
+                                        <label for="password">Password</label>
+                                    </div>
+
+                                    <button
+                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                        type="submit">Create
+                                    </button>
+
+                                </form>
+                                <!--Login Form-->
+                                <form id="login">
+                                    <h3 class="login-heading mb-4">
+                                        <center>LOGIN</center>
+                                    </h3>
+                                    <div class="form-label-group">
+                                        <input type="text" placeholder="username" class="form-control" required
+                                            autofocus />
+                                        <label for="username">Username</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="password" placeholder="Password" class="form-control" required
+                                            autofocus>
+                                        <label for="password">Password</label>
+                                    </div>
+                                    <button
+                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                        type="submit">Login
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="assets/reg.js"></script>
+
+</body>
+
+</html>
