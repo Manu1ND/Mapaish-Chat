@@ -264,7 +264,7 @@ hr
 	background: rgb(39, 38, 38);
 	display: flex;
 	align-items: baseline;
-	padding: 15px 15px;
+	padding: 15px 0px;
 	align-items: center;
 	margin-top: 19px;
 	bottom: 0;
@@ -272,7 +272,7 @@ hr
 
 .chat-box-tray input 
 {
-	margin: 0 10px;
+	margin: 0 40px;
 	padding: 6px 2px;
 }
 
@@ -281,9 +281,4 @@ hr
 	color: rgb(231, 104, 19);
 	font-size: 30px;
 	vertical-align: middle;
-}
-
-.chat-box-tray i:last-of-type 
-{
-	margin-left: 25px;
 }

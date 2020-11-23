@@ -2,10 +2,7 @@
 include("db.php");
 session_start();
 
-try{
-	// set the PDO error mode to exception
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
+try{	
 	if(isset($_SESSION['username'])) {
 		$username = $_SESSION['username'];
 

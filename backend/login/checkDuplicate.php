@@ -5,9 +5,6 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 
 try {
-	// set the PDO error mode to exception
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 	// check duplicate username
 	$checkUsernameSQL = "SELECT * FROM `members` WHERE `Username` = :username";
 	$checkUsernameSTMT = $conn->prepare($checkUsernameSQL);
@@ -18,7 +15,7 @@ try {
 		echo "username";
 	}
 
-	// check duplicate username
+	// check duplicate email
 	$checkEmailSQL = "SELECT * FROM `members` WHERE `Email` = :email";
 	$checkEmailSTMT = $conn->prepare($checkEmailSQL);
 	$checkEmailSTMT->bindParam(':email', $email);
@@ -30,3 +27,5 @@ try {
 } catch (PDOException $error) {
 	echo "error";
 }
+
+$conn = NULL;

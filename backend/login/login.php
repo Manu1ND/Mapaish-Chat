@@ -3,9 +3,6 @@ include("../db.php");
 session_start();
 
 try {
-	// set the PDO error mode to exception
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 	$username = $_POST['username'];
 	$password = $_POST['mem_Password'];
 
@@ -26,7 +23,7 @@ try {
 		echo "User does not exist";
 	}
 } catch (PDOException $e) {
-	exit($e);
+	echo $e;
 }
 
 $conn = NULL;
