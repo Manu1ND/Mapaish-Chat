@@ -23,7 +23,7 @@ body
 
 .col-md-8
 {
-	background-image: url(https://images.pexels.com/photos/2457278/pexels-photo-2457278.jpeg);
+	background-image: url(http://localhost/sem5mp/gold-luxury-background-concept_23-2148609291.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
    -webkit-background-size: cover;
@@ -62,7 +62,7 @@ body
 
 .settings-tray 
 {
-	background: rgb(37, 37, 37);
+	background: rgb(0, 0, 0);
 	padding: 10px 15px;
 	border-radius: 7px;
 }
@@ -140,7 +140,7 @@ input:focus
 
 .friend-drawer--grey 
 {
-	background:  rgb(37, 37, 37);
+	background:  rgb(0, 0, 0);
 }
 
 .friend-drawer .text 
@@ -261,7 +261,7 @@ hr
 
 .chat-box-tray 
 {
-	background: rgb(39, 38, 38);
+	background: rgb(0, 0, 0);
 	display: flex;
 	align-items: baseline;
 	padding: 15px 0px;
@@ -282,3 +282,24 @@ hr
 	font-size: 30px;
 	vertical-align: middle;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #014283; 
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #012b55; 
+  }

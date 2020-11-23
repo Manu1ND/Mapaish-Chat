@@ -15,31 +15,6 @@
     background-position: center;
 }
 
-.login-heading {
-    color: #49fe7f;
-    font-weight: 300;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-}
-
-.register-heading{
-    color: #49fe7f;
-    font-weight: 300;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-}
-.title{
-    color: #49fe7f;
-}
-
-.btn-login {
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-    border-radius: 2rem;
-    background-color: #ec4d4d;
-}
-
 .form-label-group {
     position: relative;
     margin-bottom: 1rem;
@@ -124,4 +99,9 @@
     .form-label-group input:-ms-input-placeholder {
         color: #777;
     }
+}
+.btn-login{
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
 }

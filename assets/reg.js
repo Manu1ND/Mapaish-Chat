@@ -19,9 +19,9 @@ $(document).ready(function () {
             }
         },
         messages: {
-            mem_name: `<div class="alert alert-warning alert-dismissible fade show">
-                <strong>Warning!</strong> Full name is required.
-            </div>`,
+            mem_name: `<small class="text-danger">
+            Duplicate Username.
+            </small>`,
             username: `<div class="alert alert-warning alert-dismissible fade show">
                 <strong>Warning!</strong> Username is required.
             </div>`,
