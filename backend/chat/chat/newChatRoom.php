@@ -1,8 +1,10 @@
 <?php
+include("../../session.php");
 include("../../db.php");
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
+	
 	if($_POST['group']) {
 		$isGroup = 1;
 		$groupName = $_POST['groupName'];

@@ -1,8 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 
 	$memberInfoSQL = "SELECT `Name`, `imgLink`, `status` FROM `members` WHERE `Username` = :username;";
 	$memberInfoSTMT = $conn->prepare($memberInfoSQL);

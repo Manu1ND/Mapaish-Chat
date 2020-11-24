@@ -1,9 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
-session_start();
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 
 	// load members for new chatroom
 	if($_POST['type'] == "newChat"){

@@ -1,9 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
-session_start();
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 	$roomID = $_POST["roomID"];
 	$lastID = $_POST["lastID"];
 

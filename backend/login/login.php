@@ -4,7 +4,7 @@ session_start();
 
 try {
 	$username = $_POST['username'];
-	$password = $_POST['mem_Password'];
+	$password = $_POST['password'];
 
 	$sql = "SELECT `password` FROM `members` WHERE `Username` = :username";
 	$stmt = $conn->prepare($sql);

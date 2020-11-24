@@ -3,7 +3,7 @@ $.validator.addMethod('regex', function (value, element, param) {
         value.match(typeof param == 'string' ? new RegExp(param) : param);
 });
 // form validation
-$(document).ready(function () {
+$(function () {
     $('#register').validate({
         rules: {
             mem_name: 'required',

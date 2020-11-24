@@ -1,0 +1,52 @@
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+}
+
+body {
+    background-color: #001730;
+}
+
+.login,
+.image {
+    min-height: 100vh;
+}
+
+.bg-image {
+    background-image: url('https://image.freepik.com/free-vector/messages-concept-illustration_114360-583.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.register-heading{
+    color: #49fe7f;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.title{
+    color: #49fe7f;
+}
+
+.btn-login {
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.inactive {
+	background-color: blue;
+}
+
+button:focus {
+    outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.form-group>label {
+color:white;
+}

@@ -1,4 +1,5 @@
 <?php
+
 function insertPicture($imageFileName, $ID, $target_dir, $serverLink)
 {
 	if ($_FILES[$imageFileName]["error"] == 0) {

@@ -1,9 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
-session_start();
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 	
 	$roomSQL = 'SELECT `imgLink` FROM `members` WHERE `Username` = :username';
 	$roomSTMT = $conn->prepare($roomSQL);

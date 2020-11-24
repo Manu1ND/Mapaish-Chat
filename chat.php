@@ -1,3 +1,7 @@
+<?php
+include("backend/session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,10 +50,11 @@
 							<i class="material-icons" id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">menu</i>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" id="changeNameModalButton" href="#" data-toggle="modal"
+								<a class="dropdown-item" id="changeNameModalButton" data-toggle="modal"
 									data-target="#chatModal">Settings</a>
-								<a class="dropdown-item" id="changePasswordModalButton" href="#" data-toggle="modal"
+								<a class="dropdown-item" id="changePasswordModalButton" data-toggle="modal"
 									data-target="#chatModal">Change Password</a>
+								<a class="dropdown-item" href="backend/login/logout.php">Logout</a>
 							</div>
 						</i>
 					</span>

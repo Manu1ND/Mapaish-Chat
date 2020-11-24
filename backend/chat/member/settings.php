@@ -1,4 +1,5 @@
 <?php
+include("../../session.php");
 include("../../db.php");
 include("../importPicture.php");
 
@@ -9,9 +10,10 @@ $serverLink = $prefix . $domain . "profilePicture/member/";
 $link = $_SERVER['DOCUMENT_ROOT'] . $relative . "profilePicture/member/";
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 	$name = $_POST['name'];
 	$removeProfilePicture = $_POST['removeProfilePicture'];
+	
 	if (!$removeProfilePicture) {
 		if (isset($_FILES['profilePicture'])) {
 			$imageFileName = "profilePicture";

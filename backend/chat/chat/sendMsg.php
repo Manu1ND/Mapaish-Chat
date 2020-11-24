@@ -1,11 +1,11 @@
 <?php
+include("../../session.php");
 include("../../db.php");
-session_start();
 
 try {
+	$username = $_SESSION['username'];
 	$roomID = $_POST["roomID"];
 	$message = $_POST["message"];
-	$username = "Manu1ND";
 
 	$insertSQL = "INSERT INTO `messages` (`roomID`, `Username`, `message`, `time`) VALUES (:roomID, :username, :message, UNIX_TIMESTAMP())";
 	$insertSTMT = $conn->prepare($insertSQL);

@@ -1,8 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 	$roomID = $_POST['roomID'];
 	$members = json_decode($_POST['members'], true);
 

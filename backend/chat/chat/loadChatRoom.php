@@ -1,9 +1,9 @@
 <?php
+include("../../session.php");
 include("../../db.php");
-session_start();
 
 try {
-	$username = "Manu1ND";
+	$username = $_SESSION['username'];
 	
 	$roomSQL = 'SELECT `chatroom`.`roomID`,
 		CASE WHEN `isGroup` = "1" THEN `groupName`
