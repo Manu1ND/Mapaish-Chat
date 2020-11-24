@@ -108,8 +108,8 @@ $(function () {
 
 	// Menu
 	//Settings
-	$("#changeNameModalButton").on("click", function () {
-		$('#chatModalTitle').text('Change Name');
+	$("#settingsModalButton").on("click", function () {
+		$('#chatModalTitle').text('Settings');
 		var html = `
 			<div class="form-group row">
 				<label for="changeName" class="col-sm-4 col-form-label">Name</label>
@@ -146,18 +146,18 @@ $(function () {
 					$('#changeStatus').val(data.status);
 					var profilePicture = data.profilePicture;
 					if (!profilePicture) {
-						profilePicture = "https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png";
+						profilePicture = "assets/images/profilePicture.png";
 						$('#removePicture').val(1);
 					}
 					$('#picturePreview').attr("src", profilePicture);
 				}
 			}
 		});
-		var button = `<button type="button" id="changeSettingsSubmit" class="btn btn-primary">Save</button>`;
+		var button = `<button type="button" id="settingsSubmit" class="btn btn-primary">Save</button>`;
 		$('#chatModalButton').html(button);
 	});
 	// Settings Submit
-	$(document).on("click", "#changeSettingsSubmit", function () {
+	$(document).on("click", "#settingsSubmit", function () {
 		var name = $('#changeName').val();
 		var profilePicture = $('#changePicture')[0].files[0];
 		var removeProfilePicture = $('#removePicture').val();
@@ -189,15 +189,47 @@ $(function () {
 				<label for="password" class="col-sm-4 col-form-label">Password</label>
 				<div class="col-sm-8">
 					<input type="password" class="form-control" id="password"></input>
+					<small class="text-danger" id="passwordError"></small>
+					<input type="hidden" id="passwordValid" value="0" />
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="confirmPassword" class="col-sm-4 col-form-label">Re-Enter Password</label>
 				<div class="col-sm-8">
 					<input type="password" class="form-control" id="confirmPassword"></input>
+					<small class="text-danger" id="confirmPasswordError"></small>
+					<input type="hidden" id="confirmPasswordValid" value="0" />
 				</div>
 			</div>`;
 		$('#chatModalBody').html(html);
+		var button = `<button type="button" id="changePasswordSubmit" class="btn btn-primary">Save</button>`;
+		$('#chatModalButton').html(button);
+	});
+	// Password Validation
+	$(document).on("keyup", "#password", function () {
+		validPassword();
+	});
+	$(document).on("keyup", "#confirmPassword", function () {
+		validConfirmPassword();
+	});
+	// Change Password Submit
+	$(document).on("click", "#changePasswordSubmit", function () {
+		validPassword();
+		validConfirmPassword();
+		var passwordValid = parseInt($('#passwordValid').val());
+		var confirmPasswordValid = parseInt($('#confirmPasswordValid').val());
+		if (passwordValid && confirmPasswordValid) {
+			var password = $('#password').val();
+			$.ajax({
+				method: "POST",
+				url: "backend/chat/member/changePassword.php",
+				data: { password: password },
+				success: function (data) {
+					console.log(data);
+					$('#chatModal').modal('toggle');
+				}
+			});
+		}
 	});
 
 	// Group Settings
@@ -330,7 +362,7 @@ $(function () {
 					$('#changeGroupName').val(data.groupName);
 					var groupPicture = data.groupPicture;
 					if (!groupPicture) {
-						groupPicture = "https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png";
+						groupPicture = "assets/images/profilePicture.png";
 						$('#removePicture').val(1);
 					}
 					$('#picturePreview').attr("src", groupPicture);
@@ -373,7 +405,7 @@ $(function () {
 	});
 	// remove image
 	$(document).on("click", "#removePicture", function () {
-		$('#picturePreview').attr("src", "https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png");
+		$('#picturePreview').attr("src", "assets/images/profilePicture.png");
 		var fileName = "Choose Image";
 		$("#pictureLabel").removeClass("selected").html(fileName);
 		$('#changePicture').val('');
@@ -385,3 +417,54 @@ $(function () {
 		$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 	});
 });
+
+function validPassword() {
+	var password = $('#password').val();
+	var html = '';
+	if (password) {
+		var passwordFormat = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+		if (password.match(passwordFormat)) {
+			$('#passwordError').html(html);
+			$('#password').removeClass('is-invalid');
+			$('#password').addClass('is-valid');
+			$('#passwordValid').val(1);
+		} else {
+			html = `<strong>Password must contain minimum eight characters, at least one letter and one number.</strong>`;
+			$('#passwordError').html(html);
+			$('#password').removeClass('is-valid');
+			$('#password').addClass('is-invalid');
+			$('#passwordValid').val(0);
+		}
+	} else {
+		html = `<strong>This field is required.</strong>`;
+		$('#passwordError').html(html);
+		$('#password').removeClass('is-valid');
+		$('#password').addClass('is-invalid');
+		$('#passwordValid').val(0);
+	}
+}
+function validConfirmPassword() {
+	var password = $('#password').val();
+	var confirmPassword = $('#confirmPassword').val();
+	var html = '';
+	if (password) {
+		if (password == confirmPassword) {
+			$('#confirmPasswordError').html(html);
+			$('#confirmPassword').removeClass('is-invalid');
+			$('#confirmPassword').addClass('is-valid');
+			$('#confirmPasswordValid').val(1);
+		} else {
+			html = `<strong>Passwords do not match!</strong>`;
+			$('#confirmPasswordError').html(html);
+			$('#confirmPassword').removeClass('is-valid');
+			$('#confirmPassword').addClass('is-invalid');
+			$('#confirmPasswordValid').val(0);
+		}
+	} else {
+		html = `<strong>This field is required.</strong>`;
+		$('#confirmPasswordError').html(html);
+		$('#confirmPassword').removeClass('is-valid');
+		$('#confirmPassword').addClass('is-invalid');
+		$('#confirmPasswordValid').val(0);
+	}
+}

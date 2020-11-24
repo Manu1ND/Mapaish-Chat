@@ -21,7 +21,7 @@ $(function () {
 						if (chatRoom.picture) {
 							html += chatRoom.picture;
 						} else {
-							html += `https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png`;
+							html += `assets/images/profilePicture.png`;
 						}
 						html += `"
 									alt="">
@@ -55,7 +55,7 @@ $(function () {
 				if (data) {
 					var imgLink = data;
 				} else {
-					var imgLink = 'https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png';
+					var imgLink = 'assets/images/profilePicture.png';
 				}
 				if ($('#profilePicture').attr("src") != imgLink) {
 					$('#profilePicture').attr("src", imgLink);
@@ -156,7 +156,7 @@ function loadChat(roomID) {
 				if (chatRoomInfo.picture) {
 					$('#chatPicture').attr("src", chatRoomInfo.picture);
 				} else {
-					$('#chatPicture').attr("src", "https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png");
+					$('#chatPicture').attr("src", "assets/images/profilePicture.png");
 				}
 				chat = chatRoom.message;
 				if (chat) {

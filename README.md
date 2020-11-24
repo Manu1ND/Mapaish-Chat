@@ -1,2 +1,2 @@
 # sem5mp
-WDL and DBMS Mini Project
+WDL SEM-5 Mini Project

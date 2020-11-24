@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "bootstrap-select": "^1.13.18",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "material-icons": "^0.3.1"
   }
 }

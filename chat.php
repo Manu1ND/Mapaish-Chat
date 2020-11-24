@@ -13,8 +13,7 @@ include("backend/session.php");
 	<title>Mapaish</title>
 	<link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/node_modules/bootstrap-select/dist/css/bootstrap-select.min.css">
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+	<link rel="stylesheet" href="assets/node_modules/material-icons/iconfont/material-icons.css">
 	<link rel="stylesheet" href="assets/chat.css">
 
 </head>
@@ -50,7 +49,7 @@ include("backend/session.php");
 							<i class="material-icons" id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">menu</i>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" id="changeNameModalButton" data-toggle="modal"
+								<a class="dropdown-item" id="settingsModalButton" data-toggle="modal"
 									data-target="#chatModal">Settings</a>
 								<a class="dropdown-item" id="changePasswordModalButton" data-toggle="modal"
 									data-target="#chatModal">Change Password</a>
@@ -73,9 +72,6 @@ include("backend/session.php");
 				<div class="settings-tray">
 					<div class="friend-drawer no-gutters friend-drawer--grey">
 						<img class="profile-image" id="chatPicture" alt="">
-						<!-- <img class="profile-image" id="chatPicture"
-						src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-						alt=""> -->
 						<div class="text">
 							<h6 id="chatName" style="color: white;"></h6>
 							<p class="text-muted" id="status"></p>
