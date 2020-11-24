@@ -50,3 +50,7 @@ a:hover {
 .form-group>label {
 color:white;
 }
+
+.is-invalid, label {
+	margin-bottom: 0rem;
+}
