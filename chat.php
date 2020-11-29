@@ -14,18 +14,17 @@ include("backend/session.php");
 	<link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/node_modules/bootstrap-select/dist/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="assets/node_modules/material-icons/iconfont/material-icons.css">
-	<link rel="stylesheet" href="assets/chat.css">
+	<link rel="stylesheet" href="assets/chat/chat.css">
 
 </head>
 
 <body>
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row no-gutters">
 			<div class="col-md-4 border-right">
 				<div class="settings-tray">
 					<img class="profile-image" id="profilePicture" alt="Profile img">
-
 					<span class="settings-tray--right">
 						<!-- <i class="material-icons">cached</i> -->
 						<!-- New chat Modal buttons -->
@@ -41,8 +40,6 @@ include("backend/session.php");
 									data-target="#chatModal">Create New Group</a>
 							</div>
 						</i>
-
-						<!--Left-side hamburger dropdown menu-->
 
 						<!-- Button trigger modal -->
 						<i class="dropdown">
@@ -128,58 +125,9 @@ include("backend/session.php");
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 						<div id="chatModalButton"></div>
 					</div>
-
 				</div>
 			</div>
 		</div>
-		<!-- 
-		Menu/Settings
-		<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalTitle"
-			aria-hidden="true">
-			<div class="modal-dialog " role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="settingsModalTitle"></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div>
-							<label for="name">Name :</label>
-							<input type="text" id="name" name="name" placeholder="Your name..">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<div id="settingsButton"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		Group Settings Modal
-		<div class="modal fade" id="groupSettingsModal" tabindex="-1" role="dialog"
-			aria-labelledby="groupSettingsModalTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-
-					<div class="modal-header">
-						<h5 class="modal-title" id="groupSettingsModalTitle">Add OR Remove Member</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body" id="groupSettings"></div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<div id="groupSettingsButton"></div>
-					</div>
-				</div>
-			</div>
-		</div> -->
 
 		<input type="hidden" id="roomID" value="" />
 		<input type="hidden" id="isGroup" value="" />
@@ -188,8 +136,8 @@ include("backend/session.php");
 	<script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="assets/chat.js"></script>
-	<script src="assets/modal.js"></script>
+	<script src="assets/chat/chat.js"></script>
+	<script src="assets/chat/modal.js"></script>
 
 </body>
 

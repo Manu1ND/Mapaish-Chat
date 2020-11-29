@@ -1,0 +1,276 @@
+body {
+    background-color: #52aeeb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.container-fluid {
+    margin: auto;
+    background: #fff;
+    padding: 0;
+    border-radius: 7px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.chat-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col-md-8 {
+    background-image: linear-gradient(rgb(255 87 34 / 50%), rgb(0 108 255 / 50%)), url(../images/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.chat-panel {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 77vh;
+}
+
+.chatRooms {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 82vh;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.search-bar {
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.settings-tray {
+    background: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+
+.settings-tray .no-gutters {
+    padding: 0;
+}
+
+.settings-tray--right {
+    float: right;
+}
+
+.settings-tray--right i {
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(231, 104, 19);
+    margin-left: 5px;
+    transition: .3s;
+}
+
+.settings-tray--right i:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.search-box {
+    background: #fafafa;
+    padding: 10px 13px;
+}
+
+.search-box .input-wrapper {
+    background: #fff;
+    border-radius: 40px;
+}
+
+.search-box .input-wrapper i {
+    color: black;
+    margin-left: 7px;
+    vertical-align: middle;
+}
+
+input {
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.friend-drawer {
+    padding: 10px 15px;
+    display: flex;
+    vertical-align: baseline;
+    background: white;
+    transition: .3s ease;
+}
+
+.friend-drawer--grey {
+    background: transparent;
+}
+
+.friend-drawer .text {
+    color: rgb(160, 156, 156);
+    margin-left: 12px;
+    width: 84%;
+}
+
+.friend-drawer .text h6 {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.friend-drawer .text p {
+    margin: 0;
+}
+
+.friend-drawer .time {
+    color: grey;
+}
+
+.friend-drawer--onhover:hover {
+    background: #74b9ff;
+    cursor: pointer;
+}
+
+.friend-drawer--onhover:hover p,
+.friend-drawer--onhover:hover h6,
+.friend-drawer--onhover:hover .time {
+    color: #fff !important;
+}
+
+hr {
+    margin: 5px auto;
+    width: 60%;
+}
+
+.chat-bubble {
+    padding: 10px 14px;
+    background: #eee;
+    margin: 10px 30px;
+    border-radius: 9px;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+}
+
+.chat-bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 0;
+    margin-top: -10px;
+}
+
+.chat-bubble--left:after {
+    left: 0;
+    border-right-color: #eee;
+    border-left: 0;
+    margin-left: -20px;
+}
+
+.chat-bubble--right:after {
+    right: 0;
+    border-left-color: #014283;
+    border-right: 0;
+    margin-right: -20px;
+}
+
+.chat-bubble--title {
+    font-size: small;
+    font-family: cursive;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(231, 104, 19);
+}
+
+.chat-bubble--time {
+    font-size: small;
+    font-family: cursive;
+    font-weight: normal;
+    text-align: right;
+    font-style: italic;
+    color: rgb(231, 104, 19);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.offset-md-9 .chat-bubble {
+    background: #014283;
+    color: white;
+    font-weight: bolder;
+}
+
+.chat-box-tray {
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: baseline;
+    padding: 15px 0px;
+    align-items: center;
+    margin-top: 19px;
+    bottom: 0;
+}
+
+.chat-box-tray input {
+    margin: 0 40px;
+    padding: 6px 2px;
+}
+
+.chat-box-tray i {
+    color: rgb(231, 104, 19);
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #014283;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #012b55;
+}

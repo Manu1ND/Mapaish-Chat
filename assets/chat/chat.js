@@ -15,7 +15,7 @@ $(function () {
 					chatRooms.forEach(chatRoom => {
 						html += `
 						<div class="chatRoom">
-							<div class="friend-drawer friend-drawer--onhover" onClick="clickChat(`+ chatRoom.roomID + `, `+ chatRoom.isGroup + `)">
+							<div class="friend-drawer friend-drawer--onhover" onClick="clickChat(`+ chatRoom.roomID + `, ` + chatRoom.isGroup + `)">
 								<img class="profile-image"
 									src="`;
 						if (chatRoom.picture) {
@@ -113,17 +113,16 @@ function clickChat(roomID, isGroup) {
 	if ($('#roomID').val() != roomID) {
 		$("#chat-panel").html('');
 		$('#roomID').val(roomID);
-		if(isGroup) {
+		if (isGroup) {
 			$('#groupSettingsMenu').removeAttr('hidden');
 		} else {
-			$('#groupSettingsMenu').attr('hidden',true);
+			$('#groupSettingsMenu').attr('hidden', true);
 		}
 		loadChat(roomID).then(() => {
 			$('.chat-bubble').finish();
-			$('.chat-bubble').hide().show('slow');
-			//$("#chat-panel").animate({scrollTop: $("#chat-panel").prop("scrollHeight")});
+			$('.chat-bubble').show('slow');
+			$("#chat-panel").animate({ scrollTop: $("#chat-panel").prop("scrollHeight")}, 1000);
 		});
-		//$("#chat-panel").animate({scrollTop: $("#chat-panel").offset().top});
 	}
 	if ($('.search-bar').attr('hidden')) {
 		$('.search-bar').removeAttr('hidden').hide().show('slow');
