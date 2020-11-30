@@ -11,7 +11,8 @@ body {
     padding: 0;
     border-radius: 7px;
     height: 100vh;
-    overflow-x: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .chat-section {
@@ -165,7 +166,7 @@ hr {
     margin: 10px 30px;
     border-radius: 9px;
     position: relative;
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 0.4s ease-in;
 }
 
 .chat-bubble:after {
@@ -237,7 +238,7 @@ hr {
 
 .chat-box-tray input {
     margin: 0 40px;
-    padding: 6px 2px;
+    padding: 6px 12px;
 }
 
 .chat-box-tray i {

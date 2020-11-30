@@ -4,9 +4,10 @@ include("../../db.php");
 include("../importPicture.php");
 
 $relative = dirname($_SERVER["SCRIPT_NAME"], 4) . '/';
-$domain = $_SERVER['HTTP_HOST'] . $relative;
+$domain = $_SERVER['HTTP_HOST'];
 $prefix = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-$serverLink = $prefix . $domain . "profilePicture/member/";
+$serverLink = $prefix . $domain . $relative;
+$serverDir = "profilePicture/member/";
 $link = $_SERVER['DOCUMENT_ROOT'] . $relative . "profilePicture/member/";
 
 try {
@@ -17,7 +18,7 @@ try {
 	if (!$removeProfilePicture) {
 		if (isset($_FILES['profilePicture'])) {
 			$imageFileName = "profilePicture";
-			$imgLink = insertPicture($imageFileName, $username, $link, $serverLink);
+			$imgLink = insertPicture($imageFileName, $username, $link, $serverLink, $serverDir);
 		} else {
 			$imgLink = $_POST['imgLink'];
 		}

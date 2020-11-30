@@ -1,6 +1,6 @@
 <?php
 
-function insertPicture($imageFileName, $ID, $target_dir, $serverLink)
+function insertPicture($imageFileName, $ID, $target_dir, $serverLink, $serverDir)
 {
 	if ($_FILES[$imageFileName]["error"] == 0) {
 		/* Location */
@@ -24,7 +24,7 @@ function insertPicture($imageFileName, $ID, $target_dir, $serverLink)
 		$imageName = $ID . '-' . time() . '.' . end($temp);
 		$imageDest = $target_dir . $imageName;
 		if (move_uploaded_file($_FILES[$imageFileName]["tmp_name"], $imageDest)) {
-			$imgLink = $serverLink . $imageName;
+			$imgLink = $serverDir . $imageName;
 			return $imgLink;
 		} else {
 			throw new Exception("Sorry, there was an error uploading your file.");

@@ -94,6 +94,7 @@ $(function () {
 				success: function (data) {
 					console.log(data);
 					loadChat(roomID);
+					$('#inputMessage').val('');
 				}
 			});
 		}
@@ -180,6 +181,7 @@ function loadChat(roomID) {
 						</div>`;
 					});
 					$("#chat-panel").append(html);
+					$("#chat-panel").animate({ scrollTop: $("#chat-panel").prop("scrollHeight")}, 500);
 				}
 			}
 		}
