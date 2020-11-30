@@ -8,8 +8,7 @@ include("backend/session.php");
 <head>
 
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon"
-		href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.ico">
 	<title>Mapaish</title>
 	<link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/node_modules/bootstrap-select/dist/css/bootstrap-select.min.css">
