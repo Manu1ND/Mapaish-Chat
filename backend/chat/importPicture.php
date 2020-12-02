@@ -1,6 +1,6 @@
 <?php
 
-function insertPicture($imageFileName, $ID, $target_dir, $serverLink, $serverDir)
+function insertPicture($imageFileName, $ID, $target_dir, $serverDir)
 {
 	if ($_FILES[$imageFileName]["error"] == 0) {
 		/* Location */

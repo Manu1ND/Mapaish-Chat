@@ -17,7 +17,7 @@ try {
 	if (!$removeGroupPicture) {
 		if (isset($_FILES['groupPicture'])) {
 			$imageFileName = "groupPicture";
-			$imgLink = insertPicture($imageFileName, $roomID, $link, $serverLink, $serverDir);
+			$imgLink = insertPicture($imageFileName, $roomID, $link, $serverDir);
 		} else {
 			$imgLink = $_POST['imgLink'];
 		}

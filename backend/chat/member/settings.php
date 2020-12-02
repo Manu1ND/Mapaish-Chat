@@ -18,7 +18,7 @@ try {
 	if (!$removeProfilePicture) {
 		if (isset($_FILES['profilePicture'])) {
 			$imageFileName = "profilePicture";
-			$imgLink = insertPicture($imageFileName, $username, $link, $serverLink, $serverDir);
+			$imgLink = insertPicture($imageFileName, $username, $link, $serverDir);
 		} else {
 			$imgLink = $_POST['imgLink'];
 		}

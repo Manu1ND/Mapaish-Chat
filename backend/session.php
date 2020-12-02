@@ -16,7 +16,7 @@ try{
 }
 
 $prefix = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-$domain = $_SERVER['HTTP_HOST'].'/sem5mp';
+$domain = $_SERVER['HTTP_HOST'].'/WDL';
 $relative = '/login.html';
 $url = $prefix.$domain.$relative;
 if(!isset($_SESSION['username']) || !$stmt->rowCount()){
