@@ -102,37 +102,17 @@ server.
 #### Registration Tab:
 ![image](https://user-images.githubusercontent.com/73554415/134123216-d565412b-8044-4a21-88f9-344dfc6040ab.png)
 
-#### Register Validation:
-![image](https://user-images.githubusercontent.com/73554415/134123580-85a974c4-d77b-4507-b0e8-c7ee4e389130.png)
-
 #### Chat Room:
 ![image](https://user-images.githubusercontent.com/73554415/134125385-8f5d7c05-f453-49f2-99f4-5c76f2759cd5.png)
 
-#### Left Pane:
- ![image](https://user-images.githubusercontent.com/73554415/134124725-47509a0c-529d-473b-a3bf-7678bf3a8431.png)
-
-#### Search: Search field filters Chat Room
-![image](https://user-images.githubusercontent.com/73554415/134124767-f72473cc-2400-444b-9035-52b2e090589a.png)
-
 #### Hamburger Menu Button:
-![image](https://user-images.githubusercontent.com/73554415/134124816-3654787b-c972-4518-bc7e-f0bbf0a6fca2.png)
-![image](https://user-images.githubusercontent.com/73554415/134124834-4d3795ad-99e6-4194-8fee-aef3482a42b4.png)
 ![image](https://user-images.githubusercontent.com/73554415/134124850-a117b41c-5fa7-46b4-8c78-68e65de6743d.png)
 
-#### Message Button:
-![image](https://user-images.githubusercontent.com/73554415/134125468-8286516b-94e3-4ce7-8f72-7901cf03297e.png)
+#### New Chat and New Group:
 ![image](https://user-images.githubusercontent.com/73554415/134125475-a3ac3539-e0df-4a60-ad9c-f0717c3ea5cb.png)
 ![image](https://user-images.githubusercontent.com/73554415/134125481-782fc909-6a04-469d-8f2c-9408b4211e69.png)
 
-#### Right Pane:
-![image](https://user-images.githubusercontent.com/73554415/134125514-5518c2b8-7c9c-4a1e-8d85-c54871be9d27.png)
-
-#### Message Field:
-![image](https://user-images.githubusercontent.com/73554415/134125529-f224b43a-3051-4114-827d-d418c9576027.png)
-
 #### Hamburger Menu Button for Group Chat:
-![image](https://user-images.githubusercontent.com/73554415/134125557-ecbd6ed7-aa7b-4755-948f-9662471ad201.png)
-![image](https://user-images.githubusercontent.com/73554415/134125571-c60e05d7-70db-4904-a4f0-39ae98dce2ba.png)
 ![image](https://user-images.githubusercontent.com/73554415/134125587-0de728a8-4317-428e-96b2-7e5e31b3bf06.png)
 ![image](https://user-images.githubusercontent.com/73554415/134125595-9f508186-1d98-4259-aafc-eb208290b9b2.png)
 
