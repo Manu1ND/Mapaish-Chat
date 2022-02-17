@@ -1,9 +1,6 @@
 # MAPAISH Chat Server
 
-This project is to create a chat application with a server and users to enable the
-users to chat with each other. To develop an instant messaging solution to
-enable users to seamlessly communicate with each other. The project should be
-user friendly to use, enabling even a novice person to use it.
+MAPAISH Chat Server is an instant messaging solution built using vanilla JS for frontend with PHP and MariaDB for backend. It allows users to seamlessly communicate with each other. The project should be designed to very user friendly to use, enabling even a novice person to use it.
 
 
 # Documentation
